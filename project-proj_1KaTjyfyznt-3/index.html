@@ -1,0 +1,119 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TTT Financial Savings Society</title>
+    <meta name="description" content="Comprehensive financial savings society management system for tracking memberships, contributions, borrowings and repayments">
+    <meta name="keywords" content="financial, savings, society, membership, contributions, loans, repayments">
+    <meta property="og:title" content="TTT Financial Savings Society">
+    <meta property="og:description" content="Comprehensive financial savings society management system">
+    <meta name="twitter:title" content="TTT Financial Savings Society">
+    <meta name="twitter:description" content="Comprehensive financial savings society management system">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
+
+    <style type="text/tailwindcss">
+        @layer theme {
+        :root {
+            --primary-color: #1e40af;
+            --secondary-color: #f8fafc;
+            --accent-color: #059669;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --border-color: #e5e7eb;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --error-color: #ef4444;
+        }
+    }
+
+    @layer base {
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--secondary-color);
+            color: var(--text-primary);
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            @apply px-4 py-2 rounded-lg font-medium transition-all;
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            @apply opacity-90 transform scale-105;
+        }
+        
+        .btn-secondary {
+            @apply px-4 py-2 rounded-lg font-medium border transition-all;
+            border-color: var(--border-color);
+            background-color: white;
+            color: var(--text-primary);
+        }
+        
+        .btn-secondary:hover {
+            @apply bg-gray-50;
+        }
+        
+        .card {
+            @apply bg-white rounded-xl shadow-sm border p-6;
+            border-color: var(--border-color);
+        }
+        
+        .input-field {
+            @apply w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 transition-all;
+            border-color: var(--border-color);
+            background-color: white;
+        }
+        
+        .input-field:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+        }
+        
+        .nav-link {
+            @apply px-4 py-2 rounded-lg font-medium transition-all cursor-pointer;
+            color: var(--text-secondary);
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="components/Navigation.js"></script>
+    <script type="text/babel" src="components/MembershipForm.js"></script>
+    <script type="text/babel" src="components/TokensForm.js"></script>
+    <script type="text/babel" src="components/ContributionsForm.js"></script>
+    <script type="text/babel" src="components/BorrowingsForm.js"></script>
+    <script type="text/babel" src="components/RepaymentsForm.js"></script>
+    <script type="text/babel" src="components/InterestCalculator.js"></script>
+    <script type="text/babel" src="components/MemberSummary.js"></script>
+    <script type="text/babel" src="components/SummaryCharts.js"></script>
+    <script type="text/babel" src="components/PeriodTransactions.js"></script>
+    <script type="text/babel" src="components/AdminPanel.js"></script>
+    <script type="text/babel" src="components/ReportsPanel.js"></script>
+    <script type="text/babel" src="utils/dbOperations.js"></script>
+    <script type="text/babel" src="app.js"></script>
+
+</body>
+
+</html>
